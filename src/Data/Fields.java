@@ -14,7 +14,7 @@ public class Fields implements Serializable {
 	static ArrayList<String>
 //			dateList = new ArrayList<String>(),
 			columnHeaderList = new ArrayList<String>();
-	static HashSet<String> stockList;
+	public static HashSet<String> stockList;
 
 	public static boolean inStockList(String code){
 		try {
@@ -61,6 +61,7 @@ public class Fields implements Serializable {
 			columnMap.put(c, columnHeaderList.size() - 1);
 		}
 	}
+
 
 	public static void save() {
 		Utility.writeObject("Fields.sav",

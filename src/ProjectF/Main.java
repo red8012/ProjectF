@@ -1,6 +1,7 @@
 package ProjectF;
 import Data.DB;
 import Data.Fields;
+import Parser.ParserRunner;
 
 public class Main {
 
@@ -14,8 +15,13 @@ public class Main {
 //		Fields.save();
 //		DB.save();
 
-		Fields.load();
+//		Fields.load();
+//		DB.load();
+//		DB.get("2330").print(0);
+
+//		new ParserRunner("2013-12-02","2013-12-03", true).run();
 		DB.load();
+		Fields.load();
 		DB.get("2330").print(0);
 	}
 }
