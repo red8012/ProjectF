@@ -33,11 +33,12 @@ public class ParserFactory implements Runnable {
 			for (int i = 0; i < skipLines; i++) line = reader.readLine();
 			if (line == null) {
 				reader.close();
-				System.err.println("skipped ");
+				System.out.print("   " + date);
 				return;
 			}
 			while ((line = reader.readLine()) != null) {
 				String[] split = line.split(",");
+//				if (split[0].equals("2330") && date.equals("2013-11-04")) System.out.println("\n" + line);// debug
 				try {
 					if (split[0].length() != 4) continue;
 					if (!Fields.inStockList(split[0])) continue;
@@ -46,13 +47,20 @@ public class ParserFactory implements Runnable {
 				} catch (NumberFormatException e) {
 					continue;
 				}
-				if (shouldAddNewRow)
+				if (shouldAddNewRow && DB.get(split[0]).getRowNumber(date) != -1) {
+					System.err.println("\nWarning: date duplicate -> " + date);
+					shouldAddNewRow = false;
+				}
+				if (shouldAddNewRow) {
 					DB.get(split[0]).addRow(date);
-				for (int i = 0; i < columns.length; i++)
-					DB.set(split[0], DB.get(split[0]).getRowCount() - 1,
-							columnNames[i], Utility.stringToDouble(split[columns[i]]));
+					for (int i = 0; i < columns.length; i++)
+						DB.set(split[0], DB.get(split[0]).getRowCount() - 1,
+								columnNames[i], Utility.stringToDouble(split[columns[i]]));
+				} else {
+					for (int i = 0; i < columns.length; i++)
+						DB.get(split[0]).set(date, columnNames[i], Utility.stringToDouble(split[columns[i]]));
+				}
 			}
-			System.out.print("*");
 			reader.close();
 		} catch (Exception e) {
 			e.printStackTrace();

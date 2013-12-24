@@ -27,7 +27,7 @@ public class Stock implements Serializable {
 	}
 
 	public void set(String date, String columnName, Double value) {
-		set(date.indexOf(date), Fields.nameToColumn(columnName), value);
+		set(dateList.indexOf(date), Fields.nameToColumn(columnName), value);
 	}
 
 	public void set(int row, String columnName, Double value) {
@@ -48,6 +48,10 @@ public class Stock implements Serializable {
 
 	public int getRowCount() {
 		return content.size();
+	}
+
+	public int getRowNumber(String date){
+		return dateList.indexOf(date);
 	}
 
 	public void print(int row) {

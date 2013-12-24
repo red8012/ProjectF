@@ -15,6 +15,10 @@ public class DB implements Serializable {
 		data = (HashMap<String, Stock>) Utility.readObject("Database.sav", 1)[0];
 	}
 
+	public static void reset(){
+		data = new HashMap<String, Stock>();
+	}
+
 	public static void insertStock(String code) {
 		data.put(code, new Stock(code));
 	}

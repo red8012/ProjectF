@@ -2,7 +2,7 @@ package Data;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-public class UnitTest extends TestCase {
+public class DataTest extends TestCase {
 	@Test
 	public void testFields() throws Exception {
 //		Fields.addRow("a");

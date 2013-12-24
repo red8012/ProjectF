@@ -2,7 +2,10 @@ package Data;
 
 import ProjectF.Utility;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -16,15 +19,15 @@ public class Fields implements Serializable {
 			columnHeaderList = new ArrayList<String>();
 	public static HashSet<String> stockList;
 
-	public static boolean inStockList(String code){
+	public static boolean inStockList(String code) {
 		try {
 			return stockList.contains(code);
-		}catch (NullPointerException e){
+		} catch (NullPointerException e) {
 			try {
 				BufferedReader reader = new BufferedReader(new FileReader("stockList.txt"));
 				stockList = new HashSet<String>();
 				String line;
-				while((line=reader.readLine())!=null)
+				while ((line = reader.readLine()) != null)
 					stockList.add(line.trim());
 				reader.close();
 			} catch (IOException e1) {
@@ -56,12 +59,11 @@ public class Fields implements Serializable {
 	}
 
 	public static void addColumn(String... columnNames) {
-		for (String c:columnNames){
+		for (String c : columnNames) {
 			columnHeaderList.add(c);
 			columnMap.put(c, columnHeaderList.size() - 1);
 		}
 	}
-
 
 	public static void save() {
 		Utility.writeObject("Fields.sav",
@@ -73,5 +75,10 @@ public class Fields implements Serializable {
 		Object[] o = Utility.readObject("Fields.sav", 2);
 		columnMap = (HashMap<String, Integer>) o[0];
 		columnHeaderList = (ArrayList<String>) o[1];
+	}
+
+	public static void reset() {
+		columnMap = new HashMap<String, Integer>();
+		columnHeaderList = new ArrayList<String>();
 	}
 }

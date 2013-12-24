@@ -22,6 +22,7 @@ public class Main {
 //		new ParserRunner("2013-12-02","2013-12-03", true).run();
 		DB.load();
 		Fields.load();
-		DB.get("2330").print(0);
+//		DB.get("2330").set("2013-11-04", "外資買進股數", 7566000.0);
+//		DB.get("2330").print("2013-11-04");
 	}
 }
