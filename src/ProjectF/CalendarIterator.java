@@ -7,7 +7,7 @@ public class CalendarIterator implements Iterable<String> {
 	final Calendar start, current, end;
 	final boolean outputIsXiYuan = true;
 
-	public CalendarIterator( int startY, int startM, int startD, int endY, int endM, int endD) {
+	public CalendarIterator(int startY, int startM, int startD, int endY, int endM, int endD) {
 //		this.outputIsXiYuan = outputIsXiYuan;
 		start = new GregorianCalendar(startY, startM - 1, startD, 0, 0, 0);
 		current = (GregorianCalendar) start.clone();
@@ -15,7 +15,7 @@ public class CalendarIterator implements Iterable<String> {
 		end = new GregorianCalendar(endY, endM - 1, endD, 0, 0, 0);
 	}
 
-	public CalendarIterator( String startDate, String endDate) {
+	public CalendarIterator(String startDate, String endDate) {
 //		this.outputIsXiYuan = outputIsXiYuan;
 		String[] s = startDate.split("-"), e = endDate.split("-");
 		int startY = Integer.parseInt(s[0]),
@@ -41,8 +41,8 @@ public class CalendarIterator implements Iterable<String> {
 
 			@Override
 			public String next() {
-				String month = String.format("%02d",current.get(Calendar.MONTH) + 1),
-				date = String.format("%02d",current.get(Calendar.DAY_OF_MONTH));
+				String month = String.format("%02d", current.get(Calendar.MONTH) + 1),
+						date = String.format("%02d", current.get(Calendar.DAY_OF_MONTH));
 				return new StringBuilder().append(current.get(Calendar.YEAR))
 						.append("-").append(month)
 						.append("-").append(date).toString();

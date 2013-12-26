@@ -36,10 +36,9 @@ public class ParserRunner implements Runnable {
 			Fields.addColumn(borrowColumnNames);
 			Fields.inStockList("2330"); // load stock list
 			for (String code : Fields.stockList) DB.insertStock(code);
-		} else {
+		} else
 			DB.load();
-			Fields.load();
-		}
+
 		System.out.println("\nParsing price...");
 		parsePrice();
 		System.out.println("\nParsing three big...");
@@ -47,7 +46,6 @@ public class ParserRunner implements Runnable {
 		System.out.println("\nParsing borrow...");
 		parseBorrow();
 		DB.save();
-		Fields.save();
 	}
 
 	public void parsePrice() {
@@ -60,7 +58,7 @@ public class ParserRunner implements Runnable {
 			p.shouldAddNewRow = true;
 			parsers.add(p);
 		}
-		Utility.runInThreadPool(parsers);
+		for (Runnable r : parsers) r.run();
 	}
 
 	public void parseThreeBig() {
@@ -73,7 +71,7 @@ public class ParserRunner implements Runnable {
 			p.shouldAddNewRow = false;
 			parsers.add(p);
 		}
-		Utility.runInThreadPool(parsers);
+		Utility.runInThreadPool(parsers, 4);
 	}
 
 	public void parseBorrow() {
@@ -86,6 +84,6 @@ public class ParserRunner implements Runnable {
 			p.shouldAddNewRow = false;
 			parsers.add(p);
 		}
-		Utility.runInThreadPool(parsers);
+		Utility.runInThreadPool(parsers, 4);
 	}
 }

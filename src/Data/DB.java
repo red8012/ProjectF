@@ -9,10 +9,13 @@ public class DB implements Serializable {
 
 	public static void save() {
 		Utility.writeObject("Database.sav", data);
+		Fields.save();
 	}
 
 	public static void load() {
 		data = (HashMap<String, Stock>) Utility.readObject("Database.sav", 1)[0];
+		Fields.inStockList("2330");
+		Fields.load();
 	}
 
 	public static void reset(){

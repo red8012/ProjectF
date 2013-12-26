@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Stock implements Serializable {
 	final String code;
-	ArrayList<ArrayList<Double>> content = new ArrayList<ArrayList<Double>>(); // content[row][column]
-	ArrayList<String> dateList = new ArrayList<String>(); // row -> date
+	public ArrayList<ArrayList<Double>> content = new ArrayList<ArrayList<Double>>(); // content[row][column]
+	public ArrayList<String> dateList = new ArrayList<String>(); // row -> date
 
 	public Stock(String code) {
 		this.code = code;
@@ -57,7 +57,8 @@ public class Stock implements Serializable {
 	public void print(int row) {
 		System.out.println(code + " [ " + String.valueOf(row) + " ]  " + dateList.get(row));
 		for (String s : Fields.columnHeaderList)
-			System.out.println(s + ": " + get(row, s));
+			System.out.println(s + ":\t" + get(row, s));
+		System.out.println();
 	}
 
 	public void print(String date) {

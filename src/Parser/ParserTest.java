@@ -10,7 +10,6 @@ public class ParserTest extends TestCase {
 		new ParserRunner("2013-09-20", "2013-11-07", true).run();
 		Fields.reset();
 		DB.reset();
-		Fields.load();
 		DB.load();
 
 		assertEquals(DB.get("2330").get("2013-11-04", "成交股數"), 9642456.0);
