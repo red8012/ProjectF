@@ -1,0 +1,86 @@
+//				new MovingAverage("MA(c)", 3, Fields.nameToColumn("close")),
+//				new MovingAverage("MA(all)", 2, Fields.nameToColumn("open"), Fields.nameToColumn("high"),
+//						Fields.nameToColumn("low"), Fields.nameToColumn("close"))
+				new Delta("oneDayAfter(open)", 2, 1, "open", "open", true),
+				new Delta("oneDayAfter(open)(reg)", 2, 1, "open", "open", false),
+				new Delta("oneDay(close-open)", 1, 1, "close", "open", true),
+				new Delta("oneDay(close-open)(reg)", 1, 1, "close", "open", false),
+				new Delta("oneWeekAfter(open)", 6, 1, "open", "open", true),
+				new ForeignBuyPercentage(),
+//				new MovingAverage("center", 1, "high", "low"),
+//				new BollingerNormalizer("centerBPercentage", 20, "center"),
+				new BollingerNormalizer("threeBigBPercentage", 20, "三大法人買賣超股數"),
+				new BollingerNormalizer("BNForeignBuyPercentage", 20, "foreignBuyPercentage"),
+
+				new Test("(c-o)/o"), new Test("(h-o)/o"), new Test("(l-o)/o"), new Test("(c-l)/(h-l)"),
+				new Test("0000(c-o)/o"),
+
+//				new MovingAverage("MAFBP", 10, "foreignBuyPercentage"),
+//				new Delta("DMAFBP1", 0, -1, "MAFBP", "MAFBP", false),
+//				new Delta("DMAFBP3", 0, -3, "MAFBP", "MAFBP", false),
+//				new BollingerNormalizer("BNVolume", 20, "volume"),
+
+				new BollingerNormalizer("BN融資餘額",20,"融資餘額"),
+				new BollingerNormalizer("BN融券餘額",20,"融券餘額"),
+//				new BollingerNormalizer("BN融資買進",20,"融券餘額"),
+//				new BollingerNormalizer("BN融資賣出",20,"融券餘額"),
+//				new BollingerNormalizer("BN融券買進",20,"融券餘額"),
+//				new BollingerNormalizer("BN融券賣出",20,"融券餘額"),
+				new RelativeToIndex("RO","open"),
+				new RelativeToIndex("RH","high"),
+				new RelativeToIndex("RL","low"),
+				new RelativeToIndex("RC","close"),
+
+
+
+//		DB.get("0000").print("2013-11-04");
+
+//		Fields.addColumn("open");
+//		Fields.addColumn("high");
+//		Fields.addColumn("low");
+//		Fields.addColumn("close");
+		String[] col = {
+				"IXICOpen", "IXICHigh", "IXICLow", "IXICClose",
+				"GSPCOpen", "GSPCHigh", "GSPCLow", "GSPCClose",
+				"SOXOpen", "SOXHigh", "SOXLow", "SOXClose"
+		};
+		DB.load();
+		Fields.addColumn(col);
+
+//		DB.insertStock("0000");
+//		ParserRunner pr = new ParserRunner("2004-01-01","2013-12-31",true);
+//		pr.parseIndex();
+//		DB.save();
+
+		new YahooIndexParser("2004-01-01", "2013-12-31").run();
+		DB.get("0000").print("2013-12-04");
+		DB.save();
+//		new ParserRunner("2013-01-01","2013-12-25",true).run();
+//		new CalculateRunner().run();
+//		new TextWriter("csv02.csv", "2013-03-01", "2013-11-24", "csv", false, true,
+////				"oneDay(close-open)",
+////				"oneDay(close-open)(reg)",
+//				"oneDayAfter(open)",
+//				"oneDayAfter(open)(reg)",
+////				"0000(c-o)/o",
+//
+////				"RO",
+//// "RH","RL","RC"
+//
+////				"centerBPercentage",
+//				"BNForeignBuyPercentage",
+//				"BN融資餘額",
+//				"BN融券餘額",
+//				"threeBigBPercentage"
+////				"BN融資買進",
+////				"BN融資賣出",
+////				"BN融券買進",
+////				"BN融券賣出"
+////				"foreignBuyPercentage"
+////				"(c-o)/o", "(h-o)/o", "(l-o)/o",
+////				"(c-l)/(h-l)",
+////				"BNVolume",
+////				"MAFBP",
+////				"DMAFBP3",
+////				"DMAFBP1"
+//		).run();

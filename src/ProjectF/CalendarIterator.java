@@ -5,9 +5,11 @@ import java.util.Iterator;
 
 public class CalendarIterator implements Iterable<String> {
 	final Calendar start, current, end;
+	final int increment;
 	final boolean outputIsXiYuan = true;
 
-	public CalendarIterator(int startY, int startM, int startD, int endY, int endM, int endD) {
+	public CalendarIterator(int startY, int startM, int startD, int endY, int endM, int endD, int increment) {
+		this.increment = increment;
 //		this.outputIsXiYuan = outputIsXiYuan;
 		start = new GregorianCalendar(startY, startM - 1, startD, 0, 0, 0);
 		current = (GregorianCalendar) start.clone();
@@ -15,7 +17,8 @@ public class CalendarIterator implements Iterable<String> {
 		end = new GregorianCalendar(endY, endM - 1, endD, 0, 0, 0);
 	}
 
-	public CalendarIterator(String startDate, String endDate) {
+	public CalendarIterator(String startDate, String endDate, int increment) {
+		this.increment = increment;
 //		this.outputIsXiYuan = outputIsXiYuan;
 		String[] s = startDate.split("-"), e = endDate.split("-");
 		int startY = Integer.parseInt(s[0]),
@@ -35,7 +38,7 @@ public class CalendarIterator implements Iterable<String> {
 		return new Iterator<String>() {
 			@Override
 			public boolean hasNext() {
-				current.add(Calendar.DAY_OF_MONTH, 1);
+				current.add(increment, 1);
 				return current.compareTo(end) <= 0;
 			}
 

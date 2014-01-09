@@ -67,9 +67,9 @@ public class Utility {
 		return null;
 	}
 
-	public static void runInThreadPool(Iterable<Runnable> runnables, int poolSize){
+	public static void runInThreadPool(Iterable<Runnable> runnables, int poolSize) {
 		ExecutorService pool = Executors.newFixedThreadPool(poolSize);
-		for (Runnable r: runnables)pool.execute(r);
+		for (Runnable r : runnables) pool.execute(r);
 		pool.shutdown();
 		try {
 			if (!pool.awaitTermination(10, TimeUnit.MINUTES))

@@ -1,11 +1,7 @@
 package Feature;
 import Data.DB;
 import Data.Fields;
-import Feature.Modules.BollingerNormalizer;
 import Feature.Modules.Delta;
-import Feature.Modules.ForeignBuyPercentage;
-import Feature.Modules.MovingAverage;
-import ProjectF.Utility;
 
 import java.util.LinkedList;
 
@@ -17,15 +13,16 @@ public class CalculateRunner implements Runnable {
 	public void run() {
 		DB.load();
 		final ModuleFactory modules[] = {
-//				new MovingAverage("MA(c)", 3, Fields.nameToColumn("close")),
-//				new MovingAverage("MA(all)", 2, Fields.nameToColumn("open"), Fields.nameToColumn("high"),
-//						Fields.nameToColumn("low"), Fields.nameToColumn("close"))
-				new Delta("oneDayAfter(open)", 2, 1, "open", true),
-				new Delta("oneWeekAfter(open)", 6, 1, "open", true),
-				new ForeignBuyPercentage(),
-				new MovingAverage("center", 1, "high", "low"),
-				new BollingerNormalizer("centerBPercentage", 20, "center"),
-				new BollingerNormalizer("threeBigBPercentage", 20, "三大法人買賣超股數"),
+				new Delta("oneDayAfter(open)(reg)", 2, 1, "open", "open", false),
+				new Delta("oneDay(close-open)(reg)", 1, 1, "close", "open", false),
+				new Delta("oneDay(close-close)(reg)", 1, 0, "close", "close", false),
+				new Delta("IXICClose-", 0, -1, "IXICClose", "IXICClose", false),
+				new Delta("GSPCClose-", 0, -1, "GSPCClose", "GSPCClose", false),
+				new Delta("SOXClose-", 0,  -1, "SOXClose", "SOXClose", false),
+
+				new Delta("IXICOpen-", 1, 0, "IXICOpen", "IXICOpen", false),
+				new Delta("GSPCOpen-", 1, 0, "GSPCOpen", "GSPCOpen", false),
+				new Delta("SOXOpen-",  1, 0, "SOXOpen", "SOXOpen", false),
 		};
 
 		for (ModuleFactory m : modules)
@@ -44,7 +41,13 @@ public class CalculateRunner implements Runnable {
 				}
 			});
 		}
-		Utility.runInThreadPool(runnables, 4);
+//		Utility.runInThreadPool(runnables,4);
+		for (Runnable r : runnables)
+			try {
+				r.run();
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		DB.save();
 	}
 }

@@ -5,6 +5,7 @@ import Data.Fields;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Calendar;
 
 public class TextWriter implements Runnable {
 	final int CSV = 0, SVM = 1, type;
@@ -35,13 +36,13 @@ public class TextWriter implements Runnable {
 			writer = new BufferedWriter(new FileWriter(fileName));
 			if (type == CSV) {
 				buffer = new StringBuffer();
-				if (debug)buffer.append("date,code,");
+				if (debug) buffer.append("date,code,");
 				buffer.append(answerColumnName);
 				for (String s : columnNames) buffer.append(",").append(s);
 				writer.write(buffer.toString());
 				writer.newLine();
 			}
-			for (String date : new CalendarIterator(startDate, endDate)) {
+			for (String date : new CalendarIterator(startDate, endDate, Calendar.DAY_OF_MONTH)) {
 				for (String code : Fields.stockList) {
 					try {
 						Double answer = DB.get(code).get(date, answerColumnName);
@@ -54,7 +55,7 @@ public class TextWriter implements Runnable {
 						for (int i = 0; i < columnNames.length; i++) {
 							if (type == SVM) buffer.append(i + 1).append(":");
 							Double d = DB.get(code).get(date, columnNames[i]);
-							if (d == null) {
+							if (d == null || d.isNaN()) {
 								shouldSkip = true;
 								break;
 							}
@@ -63,7 +64,7 @@ public class TextWriter implements Runnable {
 						if (shouldSkip) continue;
 						writer.write(buffer.toString());
 						writer.newLine();
-						if (answer>0)positive++;
+						if (answer > 0) positive++;
 						else negative++;
 					} catch (Exception e) {
 						System.err.print(".");
@@ -72,8 +73,9 @@ public class TextWriter implements Runnable {
 			}
 			writer.close();
 			System.out.println(new StringBuffer("\nPositive: ").append(positive)
-			.append("\t Negative: ").append(negative));
-			System.out.print((double)positive / (positive + negative) * 100);
+					.append("\t Negative: ").append(negative));
+			System.out.println(fileName);
+			System.out.print((double) positive / (positive + negative) * 100);
 			System.out.println(" %");
 		} catch (IOException e) {
 			e.printStackTrace();

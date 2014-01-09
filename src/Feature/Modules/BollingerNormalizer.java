@@ -23,6 +23,7 @@ public class BollingerNormalizer extends ModuleFactory {
 			double end = DB.get(code).get(row, column);
 			double std = new StandardDeviation(false).evaluate(data);
 			double avg = new Mean().evaluate(data);
+			if (std==Double.NaN||avg==Double.NaN)return null;
 			return new Double((end - avg) / std);
 		} catch (IndexOutOfBoundsException ea) {
 			return null;

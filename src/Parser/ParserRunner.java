@@ -4,6 +4,7 @@ import Data.Fields;
 import ProjectF.CalendarIterator;
 import ProjectF.Utility;
 
+import java.util.Calendar;
 import java.util.LinkedList;
 
 public class ParserRunner implements Runnable {
@@ -35,7 +36,13 @@ public class ParserRunner implements Runnable {
 			Fields.addColumn(threeBigColumnNames);
 			Fields.addColumn(borrowColumnNames);
 			Fields.inStockList("2330"); // load stock list
-			for (String code : Fields.stockList) DB.insertStock(code);
+			for (String code : Fields.stockList)
+				try {
+					DB.insertStock(code);
+				} catch (Exception e) {
+					e.printStackTrace();
+					System.err.println("code = " + code);
+				}
 		} else
 			DB.load();
 
@@ -50,7 +57,7 @@ public class ParserRunner implements Runnable {
 
 	public void parsePrice() {
 		LinkedList<Runnable> parsers = new LinkedList<Runnable>();
-		for (String date : new CalendarIterator(startDate, endDate)) {
+		for (String date : new CalendarIterator(startDate, endDate, Calendar.DAY_OF_MONTH)) {
 			ParserFactory p = new ParserFactory(priceUrl, date);
 			p.skipLines = 120;
 			p.columns = priceColumns;
@@ -63,7 +70,7 @@ public class ParserRunner implements Runnable {
 
 	public void parseThreeBig() {
 		LinkedList<Runnable> parsers = new LinkedList<Runnable>();
-		for (String date : new CalendarIterator(startDate, endDate)) {
+		for (String date : new CalendarIterator(startDate, endDate, Calendar.DAY_OF_MONTH)) {
 			ParserFactory p = new ParserFactory(threeBigUrl, date);
 			p.skipLines = 10;
 			p.columns = threeBigColumns;
@@ -76,7 +83,7 @@ public class ParserRunner implements Runnable {
 
 	public void parseBorrow() {
 		LinkedList<Runnable> parsers = new LinkedList<Runnable>();
-		for (String date : new CalendarIterator(startDate, endDate)) {
+		for (String date : new CalendarIterator(startDate, endDate, Calendar.DAY_OF_MONTH)) {
 			ParserFactory p = new ParserFactory(borrowUrl, date);
 			p.skipLines = 9;
 			p.columns = borrowColumns;
@@ -85,5 +92,15 @@ public class ParserRunner implements Runnable {
 			parsers.add(p);
 		}
 		Utility.runInThreadPool(parsers, 4);
+	}
+
+	public void parseIndex() {
+		LinkedList<Runnable> parsers = new LinkedList<Runnable>();
+		for (String date : new CalendarIterator(startDate, endDate, Calendar.MONTH)){
+			IndexParser p = new IndexParser(date);
+			if (rebuild) p.shouldAddNewRow=true;
+			parsers.add(p);
+		}
+		for (Runnable r : parsers) r.run();
 	}
 }

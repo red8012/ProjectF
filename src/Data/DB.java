@@ -5,24 +5,25 @@ import java.io.Serializable;
 import java.util.HashMap;
 
 public class DB implements Serializable {
-	static HashMap<String, Stock> data = new HashMap<String, Stock>();
+	public static HashMap<String, Stock> data = new HashMap<String, Stock>();
 
 	public static void save() {
-		Utility.writeObject("Database.sav", data);
+		Utility.writeObject("index.sav", data);
 		Fields.save();
 	}
 
 	public static void load() {
-		data = (HashMap<String, Stock>) Utility.readObject("Database.sav", 1)[0];
+		data = (HashMap<String, Stock>) Utility.readObject("index.sav", 1)[0];
 		Fields.inStockList("2330");
 		Fields.load();
 	}
 
-	public static void reset(){
+	public static void reset() {
 		data = new HashMap<String, Stock>();
 	}
 
-	public static void insertStock(String code) {
+	public static void insertStock(String code) throws Exception {
+		if (data.containsKey(code)) throw new Exception("duplicate stock code");
 		data.put(code, new Stock(code));
 	}
 
