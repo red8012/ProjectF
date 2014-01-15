@@ -72,66 +72,50 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ProjectF/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="18" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
+            <state line="33" column="40" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1976">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#127#158#0" expanded="true" />
+                <element signature="e#1049#1080#0" expanded="true" />
+                <element signature="e#1173#1200#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="csv2.csv" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/csv2.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2200" column="0" selection-start="250238" selection-end="250238" vertical-scroll-proportion="0.0" vertical-offset="41819" max-vertical-offset="41933">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YahooIndexParser.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Parser/YahooIndexParser.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="36" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1045">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#YahooIndexParser#0;class#YahooIndexParser#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CalculateRunner.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="CalculateRunner.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Feature/CalculateRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="43" selection-start="861" selection-end="861" vertical-scroll-proportion="0.71833646" vertical-offset="76" max-vertical-offset="1121">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1057#1067#0" expanded="true" />
-                <element signature="e#1135#1363#0" expanded="true" />
-                <element signature="e#1357#1358#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="oldCode.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/oldCode.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="83" selection-start="2407" selection-end="2482" vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="1748">
+            <state line="25" column="39" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="1995">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Delta.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Feature/Modules/Delta.java">
+      <file leaf-file-name="Simulator.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Simulator/Simulator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="11" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="722">
+            <state line="55" column="32" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.70155036" vertical-offset="607" max-vertical-offset="1349">
               <folding>
-                <element signature="method#Delta#0;class#Delta#0" expanded="true" />
-                <element signature="method#calculate#0;class#Delta#0" expanded="true" />
+                <element signature="method#Simulator#0;class#Simulator#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="label.txt" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/label.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1929" column="0" selection-start="21219" selection-end="21219" vertical-scroll-proportion="0.0" vertical-offset="36651" max-vertical-offset="40812">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pResult" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pResult">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="23" selection-start="97" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="4275">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,7 +151,6 @@
         <option value="$PROJECT_DIR$/src/Feature/Modules/MovingAverage.java" />
         <option value="$PROJECT_DIR$/fw.svm" />
         <option value="$PROJECT_DIR$/src/Feature/Modules/BollingerNormalizer.java" />
-        <option value="$PROJECT_DIR$/src/ProjectF/TextWriter.java" />
         <option value="$PROJECT_DIR$/src/Parser/ParserFactory.java" />
         <option value="$PROJECT_DIR$/src/ProjectF/CalendarIterator.java" />
         <option value="$PROJECT_DIR$/src/Parser/ParserRunner.java" />
@@ -175,13 +158,18 @@
         <option value="$PROJECT_DIR$/src/ProjectF/Utility.java" />
         <option value="$PROJECT_DIR$/src/Feature/Modules/RelativeToIndex.java" />
         <option value="$PROJECT_DIR$/src/Feature/Modules/Test.java" />
-        <option value="$PROJECT_DIR$/src/Feature/Modules/Delta.java" />
         <option value="$PROJECT_DIR$/stockList4.txt" />
         <option value="$PROJECT_DIR$/src/Data/DB.java" />
         <option value="$PROJECT_DIR$/src/Parser/YahooIndexParser.java" />
         <option value="$PROJECT_DIR$/stockList.txt" />
         <option value="$PROJECT_DIR$/oldCode.txt" />
+        <option value="$PROJECT_DIR$/src/Feature/Modules/MinusOverPlus.java" />
         <option value="$PROJECT_DIR$/src/Feature/CalculateRunner.java" />
+        <option value="$PROJECT_DIR$/src/Feature/Modules/Delta.java" />
+        <option value="$PROJECT_DIR$/src/Parser/ThreeBigParser.java" />
+        <option value="$PROJECT_DIR$/cc13.svm" />
+        <option value="$PROJECT_DIR$/src/ProjectF/TextWriter.java" />
+        <option value="$PROJECT_DIR$/src/Simulator/Simulator.java" />
         <option value="$PROJECT_DIR$/src/ProjectF/Main.java" />
       </list>
     </option>
@@ -231,6 +219,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ProjectF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProjectF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Simulator" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,13 +365,16 @@
     <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Feature" />
       <recent name="Parser" />
       <recent name="Data" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Parser" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -647,42 +656,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/stockList4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="4" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="2508" max-vertical-offset="2622">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Feature/CalculateRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="23" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0" vertical-offset="361" max-vertical-offset="1558">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1057#1067#0" expanded="true" />
-            <element signature="e#1135#1363#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Feature/Modules/Delta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="11" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="741">
-          <folding>
-            <element signature="method#Delta#0;class#Delta#0" expanded="true" />
-            <element signature="method#calculate#0;class#Delta#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Feature/Modules/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="69" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="817">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Feature/Modules/RelativeToIndex.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="11" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0" vertical-offset="152" max-vertical-offset="893">
@@ -699,16 +672,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stockList.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="4" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="171">
-          <folding />
-        </state>
+        <state line="3" column="4" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="171" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectF/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="31" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="627">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#127#158#0" expanded="true" />
+            <element signature="e#1049#1080#0" expanded="true" />
+            <element signature="e#1173#1200#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -717,8 +690,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="26" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="1026">
           <folding>
-            <element signature="e#2003#2013#0" expanded="true" />
-            <element signature="e#3265#3275#0" expanded="true" />
+            <element signature="e#2003#2013#0" expanded="false" />
+            <element signature="method#parseThreeBig#0;class#ParserRunner#0" expanded="false" />
+            <element signature="e#3265#3275#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -741,7 +715,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="11" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1577">
           <folding>
-            <element signature="method#load#0;class#Fields#0" expanded="false" />
+            <element signature="method#addColumn#0;class#Fields#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -761,7 +735,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="31" selection-start="578" selection-end="578" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="627">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#127#158#0" expanded="true" />
+            <element signature="e#1049#1080#0" expanded="true" />
+            <element signature="e#1173#1200#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -770,8 +746,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="26" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0" vertical-offset="437" max-vertical-offset="1026">
           <folding>
-            <element signature="e#2003#2013#0" expanded="true" />
-            <element signature="e#3265#3275#0" expanded="true" />
+            <element signature="e#2003#2013#0" expanded="false" />
+            <element signature="method#parseThreeBig#0;class#ParserRunner#0" expanded="false" />
+            <element signature="e#3265#3275#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -794,7 +771,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="11" selection-start="434" selection-end="434" vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="1577">
           <folding>
-            <element signature="method#load#0;class#Fields#0" expanded="false" />
+            <element signature="method#addColumn#0;class#Fields#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -846,11 +823,6 @@
         <state line="6" column="35" selection-start="172" selection-end="192" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="532" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectF/TextWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="39" selection-start="2566" selection-end="2566" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1672" />
-      </provider>
-    </entry>
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Runnable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="9" selection-start="176" selection-end="176" vertical-scroll-proportion="0.21550095" vertical-offset="0" max-vertical-offset="529" />
@@ -863,16 +835,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stockList4.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="4" selection-start="664" selection-end="664" vertical-scroll-proportion="0.85820895" vertical-offset="1818" max-vertical-offset="2622">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Feature/Modules/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="69" selection-start="976" selection-end="976" vertical-scroll-proportion="0.6691542" vertical-offset="13" max-vertical-offset="817">
-          <folding />
-        </state>
+        <state line="132" column="4" selection-start="664" selection-end="664" vertical-scroll-proportion="0.85820895" vertical-offset="1818" max-vertical-offset="2622" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Feature/Modules/RelativeToIndex.java">
@@ -882,46 +845,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parser/ParserRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="99" column="38" selection-start="3388" selection-end="3388" vertical-scroll-proportion="0.0" vertical-offset="320" max-vertical-offset="836">
-          <folding>
-            <element signature="e#2003#2013#0" expanded="true" />
-            <element signature="e#3265#3275#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Fields.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="0" selection-start="1797" selection-end="1797" vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="741">
-          <folding>
-            <element signature="method#load#0;class#Fields#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parser/ParserFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="52" selection-start="745" selection-end="903" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1178">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectF/Utility.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="76" column="10" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.82608694" vertical-offset="0" max-vertical-offset="646">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parser/IndexParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1347" selection-end="1347" vertical-scroll-proportion="1.3255814" vertical-offset="0" max-vertical-offset="1140">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#IndexParser#0;class#IndexParser#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -943,21 +870,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Data/Stock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="223" max-vertical-offset="912">
-          <folding>
-            <element signature="method#set#0;class#Stock#0" expanded="true" />
-            <element signature="method#getRowNumber#0;class#Stock#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/stockList.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="529">
-          <folding />
-        </state>
+        <state line="0" column="4" selection-start="4" selection-end="4" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="529" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ProjectF/CalendarIterator.java">
@@ -969,9 +884,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/csv.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="45505">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="45505" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oldCode.txt">
@@ -981,50 +894,159 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Feature/Modules/Delta.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="11" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="722">
-          <folding>
-            <element signature="method#Delta#0;class#Delta#0" expanded="true" />
-            <element signature="method#calculate#0;class#Delta#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/csv2.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2200" column="0" selection-start="250238" selection-end="250238" vertical-scroll-proportion="0.0" vertical-offset="41819" max-vertical-offset="41933">
-          <folding />
-        </state>
+        <state line="2200" column="0" selection-start="250238" selection-end="250238" vertical-scroll-proportion="0.0" vertical-offset="41819" max-vertical-offset="41933" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Parser/YahooIndexParser.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="36" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1045">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc0413.svm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.22093023" vertical-offset="114" max-vertical-offset="41914" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parser/IndexParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1347" selection-end="1347" vertical-scroll-proportion="0.8895349" vertical-offset="225" max-vertical-offset="1140">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#YahooIndexParser#0;class#YahooIndexParser#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="method#IndexParser#0;class#IndexParser#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ProjectF/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Data/Fields.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="18" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
+        <state line="60" column="23" selection-start="1536" selection-end="1536" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="760">
+          <folding>
+            <element signature="method#addColumn#0;class#Fields#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parser/ParserFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="23" selection-start="1382" selection-end="1440" vertical-scroll-proportion="0.8468992" vertical-offset="152" max-vertical-offset="1178">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Data/Stock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="16" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" vertical-offset="52" max-vertical-offset="874">
+          <folding>
+            <element signature="method#set#0;class#Stock#0" expanded="false" />
+            <element signature="method#set#1;class#Stock#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parser/ParserRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="38" selection-start="3388" selection-end="3388" vertical-scroll-proportion="0.9263566" vertical-offset="320" max-vertical-offset="1045">
+          <folding>
+            <element signature="e#2003#2013#0" expanded="false" />
+            <element signature="method#parseThreeBig#0;class#ParserRunner#0" expanded="false" />
+            <element signature="e#3265#3275#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Feature/Modules/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="69" selection-start="976" selection-end="976" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="741">
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="method#Test#0;class#Test#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Feature/Modules/MinusOverPlus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="9" selection-start="454" selection-end="454" vertical-scroll-proportion="0.0" vertical-offset="19" max-vertical-offset="551">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#MinusOverPlus#0;class#MinusOverPlus#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Feature/Modules/Delta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="50" selection-start="746" selection-end="746" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="722">
+          <folding>
+            <element signature="method#Delta#0;class#Delta#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parser/ThreeBigParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1193" selection-end="1550" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="988">
+          <folding>
+            <element signature="method#ThreeBigParser#0;class#ThreeBigParser#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cc13.svm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="214" column="23" selection-start="133998" selection-end="133998" vertical-scroll-proportion="7.879845" vertical-offset="0" max-vertical-offset="4199" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectF/TextWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="44" selection-start="2486" selection-end="2486" vertical-scroll-proportion="0.44186047" vertical-offset="988" max-vertical-offset="1748">
+          <folding>
+            <element signature="method#TextWriter#0;class#TextWriter#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/label.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1929" column="0" selection-start="21219" selection-end="21219" vertical-scroll-proportion="0.0" vertical-offset="36651" max-vertical-offset="40812">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Feature/CalculateRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="43" selection-start="861" selection-end="861" vertical-scroll-proportion="0.71833646" vertical-offset="76" max-vertical-offset="1121">
+        <state line="25" column="39" selection-start="820" selection-end="820" vertical-scroll-proportion="0.0" vertical-offset="209" max-vertical-offset="1995">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ProjectF/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="40" selection-start="1000" selection-end="1000" vertical-scroll-proportion="0.0" vertical-offset="418" max-vertical-offset="1976">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1057#1067#0" expanded="true" />
-            <element signature="e#1135#1363#0" expanded="true" />
-            <element signature="e#1357#1358#0" expanded="true" />
+            <element signature="e#127#158#0" expanded="true" />
+            <element signature="e#1049#1080#0" expanded="true" />
+            <element signature="e#1173#1200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pResult">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="23" selection-start="97" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="4275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Simulator/Simulator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="32" selection-start="1818" selection-end="1818" vertical-scroll-proportion="0.70155036" vertical-offset="607" max-vertical-offset="1349">
+          <folding>
+            <element signature="method#Simulator#0;class#Simulator#0" expanded="true" />
           </folding>
         </state>
       </provider>

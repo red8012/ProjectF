@@ -21,7 +21,7 @@ public class Delta extends ModuleFactory {
 		try {
 			double d1 = DB.get(code).get(row + baseline, columnOfBaseline),
 					d2 = DB.get(code).get(row + minus, columnOfMinus);
-			if (!twoClass) return (d1 - d2) / d1;
+			if (!twoClass) return (d1 - d2) / d1 * 100;
 			if (d1 - d2 > 0) return 1.0;
 			else return -1.0;
 		} catch (IndexOutOfBoundsException ea) {

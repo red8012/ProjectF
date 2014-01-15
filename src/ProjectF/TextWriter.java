@@ -9,19 +9,22 @@ import java.util.Calendar;
 
 public class TextWriter implements Runnable {
 	final int CSV = 0, SVM = 1, type;
-	final boolean isClassification, debug;
+	final boolean isClassification, debug, emitLabel;
 	final String fileName, startDate, endDate, answerColumnName;
 	final String[] columnNames;
-	BufferedWriter writer;
+	BufferedWriter writer, label;
 	StringBuffer buffer;
 	int positive = 0, negative = 0;
 
-	public TextWriter(String fileName, String startDate, String endDate, String type, boolean isClassification, boolean debug, String answerColumnName, String... columnNames) throws Exception {
+	public TextWriter(String fileName, String startDate, String endDate,
+	                  String type, boolean isClassification, boolean debug, boolean emitLabel,
+	                  String answerColumnName, String... columnNames) throws Exception {
 		this.fileName = fileName;
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.isClassification = isClassification;
 		this.debug = debug;
+		this.emitLabel = emitLabel;
 		if (type.equals("csv")) this.type = CSV;
 		else if (type.equals("svm")) this.type = SVM;
 		else throw new Exception("wrong type");
@@ -34,6 +37,7 @@ public class TextWriter implements Runnable {
 		try {
 			DB.load();
 			writer = new BufferedWriter(new FileWriter(fileName));
+			label = new BufferedWriter(new FileWriter("label.txt"));
 			if (type == CSV) {
 				buffer = new StringBuffer();
 				if (debug) buffer.append("date,code,");
@@ -62,6 +66,10 @@ public class TextWriter implements Runnable {
 							buffer.append(String.format("%.7f", d)).append(type == CSV ? "," : "\t");
 						}
 						if (shouldSkip) continue;
+						if (emitLabel){
+							label.write(date);
+							label.newLine();
+						}
 						writer.write(buffer.toString());
 						writer.newLine();
 						if (answer > 0) positive++;
@@ -72,6 +80,7 @@ public class TextWriter implements Runnable {
 				}
 			}
 			writer.close();
+			label.close();
 			System.out.println(new StringBuffer("\nPositive: ").append(positive)
 					.append("\t Negative: ").append(negative));
 			System.out.println(fileName);
